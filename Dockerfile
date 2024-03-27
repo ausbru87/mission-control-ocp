@@ -2,8 +2,6 @@
 FROM registry.access.redhat.com/ubi8/nodejs-18:latest
 # FROM node:18-alpine
 
-WORKDIR /openmct
-
 # Copy the package.json files and install dependencies
 COPY openmct /openmct
 USER root
