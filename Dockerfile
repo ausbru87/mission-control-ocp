@@ -10,7 +10,7 @@ USER root
 RUN npm install
 
 # Add a non-root user
-RUN useradd -m -r -s /bin/bash appuser && chown -R appuser /openmct
+RUN useradd -m -r -s /bin/bash appuser && chown -R appuser /app
 USER appuser
 
 # # Set the working directory
