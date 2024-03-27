@@ -5,7 +5,7 @@ FROM registry.access.redhat.com/ubi8/nodejs-18:latest
 WORKDIR /openmct
 
 # Copy the package.json files and install dependencies
-COPY ./mission-control/openmct /openmct
+COPY openmct /openmct
 USER root
 RUN npm install
 
