@@ -1,0 +1,16 @@
+# Route for mission-control
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: mission-control-route
+  labels:
+    app: mission-control
+spec:
+  to:
+    kind: Service
+    name: mission-control-service
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
